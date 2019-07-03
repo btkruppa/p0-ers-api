@@ -71,7 +71,7 @@ The ReimbursementType model is used to track what kind of reimbursement is being
     **Content:** 
     ```javascript
     {
-      "message": "The incoming token has expired"
+      "message": "You are not authorized for this operation"
     }
     ```
     Occurs if they do not have the appropriate permissions.
