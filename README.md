@@ -36,9 +36,9 @@ The Reimbursement model is used to represent a single reimbursement that an empl
   dateSubmitted: number, // not null
   dateResolved: number,
   description: string, // not null
-  resolver: number, // foreign key -> User
-  status: number, // foreign ey -> ReimbursementStatus, not null
-  type: number // foreign key -> ReimbursementType
+  resolver: User, // foreign key -> User
+  status: ReimbursementStatus, // foreign ey -> ReimbursementStatus, not null
+  type: ReimbursementType // foreign key -> ReimbursementType
 }
 ```
 
@@ -82,7 +82,7 @@ The ReimbursementType model is used to track what kind of reimbursement is being
   [GET /users/:id](#find-users-by-id)  
   [PATCH /users](#update-user)  
   [GET /reimbursements/status/:statusId](#find-reimbursements-by-status)  
-  [GET /reimbursements/author/userId:userId](#find-reimbursements-by-user)  
+  [GET /reimbursements/author/userId/:userId](#find-reimbursements-by-user)  
   [POST /reimbursements](#submit-reimbursement)  
   [PATCH /reimbursements](#update-reimbursement)  
 
